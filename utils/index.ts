@@ -2,6 +2,11 @@ import { createTheme } from "@mui/material";
 import { experimental_sx as sx } from "@mui/material/styles";
 
 export const themeParser = (theme: any) => {
+  let currentFont =
+    theme["Typography"].Heading["H1"].value.fontFamily
+      .split(".")[1]
+      .replace(/[{()}]/g, "") || "Poppins";
+
   return createTheme({
     components: {
       // Name of the component
@@ -33,41 +38,34 @@ export const themeParser = (theme: any) => {
       fontWeightRegular: 400,
       fontWeightMedium: 500,
       fontSize: 14,
-      fontFamily:
-        theme["Typography"].Heading["H1"].value.fontFamily.split(".")[1],
+      fontFamily: currentFont,
       h1: {
         lineHeight: "144px",
         letterSpacing: "-1.5px",
-        fontFamily:
-          theme["Typography"].Heading["H1"].value.fontFamily.split(".")[1],
+        fontFamily: currentFont,
       },
       h2: {
         lineHeight: "90px",
         letterSpacing: "-0.5px",
-        fontFamily:
-          theme["Typography"].Heading["H2"].value.fontFamily.split(".")[1],
+        fontFamily: currentFont,
       },
       h3: {
         lineHeight: "72px",
-        fontFamily:
-          theme["Typography"].Heading["H3"].value.fontFamily.split(".")[1],
+        fontFamily: currentFont,
       },
       h4: {
         lineHeight: "51px",
         letterSpacing: "0.25px",
-        fontFamily:
-          theme["Typography"].Heading["H4"].value.fontFamily.split(".")[1],
+        fontFamily: currentFont,
       },
       h5: {
         lineHeight: "36px",
-        fontFamily:
-          theme["Typography"].Heading["H5"].value.fontFamily.split(".")[1],
+        fontFamily: currentFont,
       },
       h6: {
         lineHeight: "30px",
         letterSpacing: "0.15px",
-        fontFamily:
-          theme["Typography"].Heading["H6"].value.fontFamily.split(".")[1],
+        fontFamily: currentFont,
       },
       subtitle1: {
         fontSize: "16px",

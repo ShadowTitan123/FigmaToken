@@ -20,6 +20,20 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
             rel="stylesheet"
           />
+
+          <link
+            href="https://fonts.googleapis.com/css2?family=Lexend&display=swap"
+            rel="stylesheet"
+          />
+
+          <link
+            href="https://fonts.googleapis.com/css2?family=Lexend&family=Mali:wght@200&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Lexend&family=Mali:wght@200&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
